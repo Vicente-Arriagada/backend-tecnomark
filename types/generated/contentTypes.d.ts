@@ -430,7 +430,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiDestactadoDestactado extends Struct.SingleTypeSchema {
+export interface ApiDestactadoDestactado extends Struct.CollectionTypeSchema {
   collectionName: 'destactados';
   info: {
     displayName: 'destactado';
