@@ -598,7 +598,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::categoria-noticia.categoria-noticia'
     >;
-    contenido: Schema.Attribute.Blocks;
+    contenido: Schema.Attribute.RichText;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
