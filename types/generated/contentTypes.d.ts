@@ -609,6 +609,40 @@ export interface ApiMenunavMenunav extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNosotroNosotro extends Struct.SingleTypeSchema {
+  collectionName: 'nosotros';
+  info: {
+    displayName: 'nosotro';
+    pluralName: 'nosotros';
+    singularName: 'nosotro';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imagen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::nosotro.nosotro'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitulo: Schema.Attribute.Text;
+    texto1: Schema.Attribute.Text;
+    texto2: Schema.Attribute.Text;
+    titulo1: Schema.Attribute.String;
+    titulo2: Schema.Attribute.String;
+    titulo3: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -1196,6 +1230,7 @@ declare module '@strapi/strapi' {
       'api::inicio.inicio': ApiInicioInicio;
       'api::logo.logo': ApiLogoLogo;
       'api::menunav.menunav': ApiMenunavMenunav;
+      'api::nosotro.nosotro': ApiNosotroNosotro;
       'api::post.post': ApiPostPost;
       'api::producto.producto': ApiProductoProducto;
       'plugin::content-releases.release': PluginContentReleasesRelease;

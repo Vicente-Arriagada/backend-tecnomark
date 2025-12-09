@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "nosotros",
+  "info": {
+    "singularName": "nosotro",
+    "pluralName": "nosotros",
+    "displayName": "nosotro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo1": {
+      "type": "string"
+    },
+    "subtitulo": {
+      "type": "text"
+    },
+    "titulo2": {
+      "type": "string"
+    },
+    "texto1": {
+      "type": "text"
+    },
+    "titulo3": {
+      "type": "string"
+    },
+    "texto2": {
+      "type": "text"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
