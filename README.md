@@ -1,61 +1,49 @@
-# 🚀 Getting started with Strapi
+#Backend Strapi CMS 
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+El proyecto utiliza la siguiente arquitectura:
 
-### `develop`
+* **Cms:** [Strapi](https://strapi.io/) (Headless CMS v5).
+* **Base de Datos:** [Neon](https://neon.tech/) (Serverless Postgres).
+* **Almacenamiento de imagenes:** [Cloudinary](https://cloudinary.com/) (Imágenes).
+* **Hosting** [Render](https://render.com/) (Web Service).
+* **Lenguaje:** Node.js.
+---
+##  Pre-requisitos
+Antes de iniciar, asegúrate de tener instalado:
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
+* **Node.js** (v22.21.1).
+* **npm**.
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## instalacion de proyecto
+1. clonar repositorio git
+2.  Crea un archivo `.env` en la raíz del proyecto.
+3.  Copia el siguiente contenido en archivo `.env`:
+
+```env
+
+# Server
+HOST=0.0.0.0
+PORT=1337
+
+# Secrets
+APP_KEYS=ye7IW4zBknktUaVmdgh3ww==,rRqakxjZunQ8eJ7AkEPRLA==,rz982bYhAG/WFy+L/fKT4w==,052nLAFYfqmgwy3LATWXNg==
+API_TOKEN_SALT=OtHzmNX+kGpRGPv9aV3jNA==
+ADMIN_JWT_SECRET=CU2Fm38p3+/2nxIxsY42Kw==
+TRANSFER_TOKEN_SALT=lthHJEQCBM/maXT39wRdhA==
+ENCRYPTION_KEY=e3T0MzCNOJQZRSOFaUStjg==
+
+# Database
+DATABASE_CLIENT=postgres
+DATABASE_HOST=ep-sparkling-sky-a4ahc6mf-pooler.us-east-1.aws.neon.tech
+DATABASE_PORT=5432
+DATABASE_NAME=strapibackend
+DATABASE_USERNAME=neondb_owner
+DATABASE_PASSWORD=npg_dXxVasIu4R2t
+DATABASE_SSL=true
+DATABASE_FILENAME=
+JWT_SECRET=IcpCKGr9NLYXvHMZbvz9zA==
+
+CLOUDINARY_NAME=dmr55rwxg
+CLOUDINARY_KEY=824387694166623
+CLOUDINARY_SECRET=eYSzFMBI5xTfs4uHHZvE4481kGg
