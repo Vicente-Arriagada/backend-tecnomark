@@ -8,6 +8,8 @@ El proyecto utiliza la siguiente arquitectura:
 * **Hosting** [Render](https://render.com/) (Web Service).
 * **Lenguaje:** Node.js.
 ---
+## uso de ia en el proyecto
+se utilizo ia para crear el script "importar-datos.js"
 ##  Pre-requisitos
 Antes de iniciar, asegúrate de tener instalado:
 
